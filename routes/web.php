@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/','ProductsController@index');
+/*Route::get('/', function () {
+    return view('homepage');
+});*/
+Route::get('/contact', function () {
+    return view('contact');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
