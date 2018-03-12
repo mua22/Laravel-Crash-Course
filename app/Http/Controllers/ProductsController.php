@@ -9,12 +9,10 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        //$products = array('laptop','oppo','iphone');
-        //$total = 3;
-        $products = Product::all();
-        //print_r($products);
+        //fetch data from db
+//        $products = Product::all();
+        $products = Product::paginate(3);
         //dd(compact('products'));
-        //return compact('products');
-        return view('homepage',compact('products'));
+        return view('products.index',compact('products'));
     }
 }
