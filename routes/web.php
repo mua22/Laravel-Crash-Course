@@ -16,6 +16,7 @@
 });*/
 
 Route::get('/','ProductsController@index');
+Route::get('/products','ProductsController@index');
 /*Route::get('/', function () {
     return view('homepage');
 });*/
