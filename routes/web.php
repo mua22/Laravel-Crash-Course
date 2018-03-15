@@ -34,4 +34,6 @@ Route::group(['prefix'=>'backend'], function () {
    Route::get('/','Admin\ProductsController@index');
    Route::get('/products','Admin\ProductsController@index');
    Route::get('/products/create','Admin\ProductsController@create');
+   Route::post('/products/store','Admin\ProductsController@store');
+   Route::get('/products/delete/{id}','Admin\ProductsController@destroy');
 });

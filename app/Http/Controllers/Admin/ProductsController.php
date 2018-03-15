@@ -38,7 +38,12 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->save();
+        //dd($product);
+        return redirect('/backend/products');
     }
 
     /**
@@ -83,6 +88,6 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return $id;
     }
 }

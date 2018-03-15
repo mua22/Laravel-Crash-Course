@@ -18,7 +18,7 @@
                 <td>{{$product->name}}</td>
                 <td>{{$product->description}}</td>
 
-                <td>Edit Delete</td>
+                <td>Edit <a href="/backend/products/delete/{{$product->id}}" class="btn btn-danger btn-sm">Delete</a></td>
             </tr>
             @endforeach
     </tbody>
