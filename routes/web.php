@@ -17,6 +17,7 @@
 
 Route::get('/','ProductsController@index');
 Route::get('/products','ProductsController@index');
+Route::get('/courses','CoursesController@index');
 /*Route::get('/', function () {
     return view('homepage');
 });*/
@@ -27,3 +28,10 @@ Route::get('/contact', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix'=>'backend'], function () {
+   Route::get('/','Admin\ProductsController@index');
+   Route::get('/products','Admin\ProductsController@index');
+   Route::get('/products/create','Admin\ProductsController@create');
+});
