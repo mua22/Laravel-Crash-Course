@@ -37,3 +37,11 @@ Route::group(['prefix'=>'backend'], function () {
    Route::post('/products/store','Admin\ProductsController@store');
    Route::get('/products/delete/{id}','Admin\ProductsController@destroy');
 });
+
+Route::get('/books','BooksController@index');
+Route::get('/books/create','BooksController@create');
+Route::post('/books','BooksController@store');
+Route::get('/books/{id}/show','BooksController@show');
+Route::get('/books/{id}/edit','BooksController@edit');
+Route::post('/books/{id}','BooksController@update');
+Route::get('/books/{id}/delete','BooksController@destroy');
