@@ -15,8 +15,8 @@ composer requir kyslik/column-sortable
     <thead>
     <tr>
         <th>ID</th>
-        <th>@sortablelink('title')</th>
-        <th>@sortablelink('year')</th>
+        <th>title</th>
+        <th>year</th>
         <th>publisher</th>
         <th>actions</th>
     </tr>

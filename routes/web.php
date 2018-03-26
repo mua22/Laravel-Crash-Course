@@ -45,3 +45,7 @@ Route::get('/books/{id}/show','BooksController@show');
 Route::get('/books/{id}/edit','BooksController@edit');
 Route::post('/books/{id}','BooksController@update');
 Route::get('/books/{id}/delete','BooksController@destroy');
+Route::get('/articles','ArticlesConroller@index');
+Route::get('/arts','ArticlesConroller@indexTest');
+Route::get('/articles/by/{id}','ArticlesConroller@byUser');
+Route::get('/articles/by/ingredient/{id}','ArticlesConroller@byIngredient');
